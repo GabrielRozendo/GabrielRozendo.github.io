@@ -1,0 +1,25 @@
+{{- $isHome := eq .RelPermalink "/" -}}
+{{- $parentURL := "" -}}
+{{- $parentText := "" -}}
+
+{{- if $isHome -}}
+    {{- /* Don't show link on home */ -}}
+{{- else -}}
+    {{- $parent := .Parent -}}
+    {{- if $parent -}}
+        {{- $parentURL = $parent.RelPermalink -}}
+        {{- if eq $parent.RelPermalink "/" -}}
+            {{- $parentText = "← Back to home" -}}
+        {{- else -}}
+            {{- $parentText = printf "← %s" $parent.Title -}}
+        {{- end -}}
+    {{- else -}}
+        {{- /* If no parent, go back to home */ -}}
+        {{- $parentURL = "/" -}}
+        {{- $parentText = "← Back to home" -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if and (not $isHome) $parentURL -}}
+<a href="{{ $parentURL }}">{{ $parentText }}</a>
+{{- end -}}

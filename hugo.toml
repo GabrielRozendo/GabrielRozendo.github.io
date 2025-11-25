@@ -1,0 +1,65 @@
+baseURL = 'https://rozendo.dev/'
+languageCode = 'en'
+title = 'Gabriel Rozendo'
+theme = 'nostyleplease'
+
+ignoreLogs = ['warning-goldmark-raw-html']
+ignoreFiles = ['^themes/nostyleplease/content/']
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.41.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = true
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[params]
+  description = "Developer, tech enthusiast, and problem solver"
+  author = "Gabriel Rozendo"
+  
+  [params.theme_config]
+    appearance = "auto"  # "light", "dark", or "auto"
+    back_home_text = "← home"
+    date_format = "2006-01-02"
+    isListGroupByDate = true
+    isShowFooter = false
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

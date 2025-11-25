@@ -1,0 +1,47 @@
+{{ $experiences := where .Site.Data.cv.experiences.experiences "show" true | default
+.Site.Data.cv.experiences.experiences }}
+{{ if $experiences }}
+<section class="cv-experiences">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-briefcase"></i> Experiences</h2>
+    </div>
+    {{ range $experiences }}
+    <div class="cv-experience-item">
+        <div class="cv-experience-header">
+            <h3 class="cv-experience-company">
+                {{ if .link }}
+                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .company }}</a>
+                {{ else }}
+                {{ .company }}
+                {{ end }}
+            </h3>
+            <div class="cv-experience-meta">
+                {{ if .tags }}<span class="cv-experience-tags">{{ .tags }}</span>{{ end }}
+                {{ if .date }}
+                {{ $isCurrent := (in (lower .date) "since") }}
+                <span class="cv-experience-date{{ if $isCurrent }} cv-experience-date-current{{ end }}">{{ .date }}</span>
+                {{ if $isCurrent }}
+                <span class="cv-experience-current-badge">Current</span>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        <div class="cv-experience-header">
+
+            <h4 class="cv-experience-role">
+                {{ .role }}
+            </h4>
+            <div class="cv-experience-meta">
+                {{ if .location }}<span class="cv-experience-location">{{ .location }}</span>{{ end }}
+            </div>
+        </div>
+
+        <div class="cv-experience-description">
+            {{ if .description_full }}
+            <div class="cv-experience-description-full">{{ .description_full | markdownify }}</div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}

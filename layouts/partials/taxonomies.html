@@ -1,0 +1,23 @@
+{{- /* Partial to display categories and tags with consistent formatting */ -}}
+{{- if or .Params.tags .Params.categories -}}
+    <span style="font-size: 0.85rem; color: #666; margin-left: 0.5rem;">
+        {{- if .Params.categories -}}
+            <span style="color: #888;">[</span>
+            {{- range $index, $category := .Params.categories -}}
+                {{- if $index }}<span style="color: #888;">; </span>{{ end -}}
+                <a href="{{ "/categories/" | relURL }}{{ $category | urlize }}" style="color: #666; text-decoration: none;">{{ $category }}</a>
+            {{- end -}}
+            <span style="color: #888;">]</span>
+        {{- end -}}
+        {{- if and .Params.categories .Params.tags -}}
+            <span style="margin: 0 0.3rem; color: #999;"> • </span>
+        {{- end -}}
+        {{- if .Params.tags -}}
+            {{- range $index, $tag := .Params.tags -}}
+                {{- if $index }} {{ end -}}
+                <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}" style="color: #666; text-decoration: none;">{{ $tag }}</a>
+            {{- end -}}
+        {{- end -}}
+    </span>
+{{- end -}}
+

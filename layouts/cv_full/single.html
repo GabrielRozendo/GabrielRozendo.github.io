@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="cv-full-container">
+    <div class="cv-full-paper">
+        <div class="cv-full-content">
+            {{ partial "cv_full/header.html" . }}
+            {{ partial "cv_full/contact.html" . }}
+            {{ partial "cv_full/profile.html" . }}
+            {{ partial "cv_full/experiences.html" . }}
+            {{ partial "cv_full/projects.html" . }}
+            {{ partial "cv_full/education.html" . }}
+            {{ partial "cv_full/languages.html" . }}
+            {{ partial "cv_full/skills.html" . }}
+            {{ partial "cv_full/certificates.html" . }}
+            {{ partial "cv_full/interests.html" . }}
+            {{ partial "cv_full/evaluation.html" . }}
+
+            <!-- {{ .Content }} -->
+
+        </div>
+    </div>
+</div>
+
+
+<div class="cv-last-update">
+    <i class="fa-regular fa-calendar fa-bounce calendar-icon"></i>&nbsp;<img alt="GitHub last commit in data/cv"
+        src="https://img.shields.io/github/last-commit/GabrielRozendo/GabrielRozendo.github.io?path=data%2Fcv&style=flat-square&label=updated%20at">
+</div>
+
+{{ end }}

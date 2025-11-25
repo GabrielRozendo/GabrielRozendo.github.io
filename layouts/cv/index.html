@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article>
+    {{ if ne .Params.showdate false }}
+    <p class="post-meta">
+        <time datetime="{{ .Date }}">
+            {{ .Date | time.Format site.Params.theme_config.date_format }}
+        </time>
+    </p>
+    {{ end }}
+
+    <h1>{{ .Site.Data.cv.profile.basic.name }}</h1>
+    <p><strong>{{ .Site.Data.cv.profile.basic.title }}</strong></p>
+
+    {{ if .Site.Data.cv.profile.contact }}
+    <p>
+        {{ if .Site.Data.cv.profile.contact.email }}
+        <a href="mailto:{{ .Site.Data.cv.profile.contact.email }}">{{ .Site.Data.cv.profile.contact.email }}</a>
+        {{ end }}
+        {{ if .Site.Data.cv.profile.contact.linkedin }}
+        | <a href="https://linkedin.com/in/{{ .Site.Data.cv.profile.contact.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        {{ end }}
+        {{ if .Site.Data.cv.profile.contact.github }}
+        | <a href="https://github.com/{{ .Site.Data.cv.profile.contact.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        {{ end }}
+    </p>
+    {{ end }}
+
+    {{ if .Site.Data.cv.profile.profile.summary }}
+    <section>
+        <h2>Profile</h2>
+        <p>{{ .Site.Data.cv.profile.profile.summary }}</p>
+    </section>
+    {{ end }}
+
+    {{ partial "cv/experiences_summary.html" . }}
+    {{ partial "cv/projects_summary.html" . }}
+    {{ partial "cv/skills_summary.html" . }}
+    {{ partial "cv/education_summary.html" . }}
+    {{ partial "cv/languages_summary.html" . }}
+
+    <hr style="margin: 2rem 0;">
+
+    <p style="text-align: center;"><strong><a href="/cv/full/">View full CV →</a></strong></p>
+</article>
+{{ end }}

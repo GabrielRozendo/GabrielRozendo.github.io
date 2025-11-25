@@ -1,0 +1,37 @@
+[cv]
+
+name = "Gabriel Oliveira Rozendo"
+title = "Software Engineer"
+
+profile = "Forward-thinking software engineer with over 15 years of experience in Mobile, Backend, DevOps, as well as tech lead throughout this process. Passionate about delivering impactful results, promoting teamwork and driving digital transformation. Skilled in Agile methodologies, mentoring junior developers and building robust systems using cutting-edge technologies. Dedicated to lifelong learning."
+
+skills = [
+  { name = "Development Practices", items = ["DevOps", "CI-CD", "Agile Methodologies", "Clean Arch", "Cloud", "Git", "Microservices", "Serverless"] },
+  { name = "Mobile Technologies", items = ["Flutter", "Dart", "Swift", "iOS Development"] },
+  { name = "Backend experiences", items = ["Dart", "Python", "C#", "GoLang", "~🥴 Node/Deno/TypeScript~"] },
+  { name = "Database", items = ["SQLite", "Postgres", "MS SQL Server", "NoSql", "MongoDB"] },
+  { name = "IT", items = ["AWS (Multiple services)", "Linux", "Docker", "Jira"] }
+]
+
+languages = [
+  { idiom = "Portuguese", level = "Native" },
+  { idiom = "English", level = "Professional" },
+  { idiom = "Spanish", level = "Basic [WIP - Work In Progress]" }
+]
+
+certificates = [
+  { name = "Advanced Project Management", issuer = "IETEC", date = "May 2012" }
+]
+
+interests = [
+  "Technology Innovation",
+  "AI",
+  "Coding",
+  "Bots · Automations",
+  "Continuous Learning",
+  "Mobile Development",
+  "Server · Backend",
+  "Cloud"
+]
+
+evaluation = "Accomplished software engineer with a proven ability to deliver impactful projects in mobile and backend development. Skilled in mentoring, leadership, and adopting innovative technologies to meet business goals. Dedicated to continuous improvement and empowering teams to achieve exceptional results."

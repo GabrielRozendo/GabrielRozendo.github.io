@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 - {{ $.Site.Title }}</title>
+    
+    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+    {{ $sass := resources.Get "css/404.scss" }}
+    {{ if $sass }}
+    {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}">
+    {{ end }}
+</head>
+<body>
+    <main class="bsod container">
+        <h1 class="neg title"><span class="bg">Error - 404</span></h1>
+        <p>We're sorry, but the page you're looking for can't be found, to continue:</p>
+        
+        <p>* Return to <a href="/" class="link">home</a>.<br />
+            * Send us an <a href="mailto:email@rozendo.dev" class="link">e-mail</a> about this error and try later.</p>
+        <nav class="nav">
+            <a href="/" class="link">index</a>&nbsp;|&nbsp;<a href="/contact" class="link">contact</a>
+        </nav>
+    </main>
+</body>
+</html>
+

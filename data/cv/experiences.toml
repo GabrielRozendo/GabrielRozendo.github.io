@@ -1,0 +1,140 @@
+[[experiences]]
+company = "Model View Labs"
+link = ""
+tags = "Contract, Freelancer"
+date = "Since Jul 2022"
+role = "Software Architect, Flutter dev & Tech Leader / team builder"
+location = "Remote 🌎"
+show = true
+description_summary = "Contracted to build and grow the agency, create and recreate clients' projects and provide leadership to build a team."
+description_full = """Contracted to build and grow the agency, create and recreate clients' projects and provide leadership to build a team.
+
++ Project: Athletic Gear, recreate the both mobile apps + server backend with Dart (dart frog + drift) in AWS
++ Project: BHBus+, recreate the mobile app. A navigation and public service tickets, using existent API rest.
++ More info in project section"""
+
+[[experiences]]
+company = "Aubay"
+link = "https://aubay.pt"
+tags = "Contract 🇵🇹🇬🇧"
+date = "Dec 2022 - Jul 2022"
+role = "tvOS Engineer at Sky (Peacock TV)"
+location = "🌍 Remote, Portugal 🇵🇹"
+show = true
+description_summary = "Worked on Apple TV streaming platform app development"
+description_full = """Worked on Apple TV streaming platform app development
+
++ Built app with Swift 5, Combine, VIPER architecture
++ Implemented native accessibility features for visually impaired users
++ Collaborated in a cross-functional team of 10 members (tvOS devs, iOS devs, QA, tech lead, PO)"""
+
+[[experiences]]
+company = "Aubay"
+link = "https://aubay.pt"
+tags = "Contract 🇵🇹🇬🇧"
+date = "Jun 2021 - Nov 2021"
+role = "iOS Engineer at Farfetch"
+location = "🌍 Remote, Portugal 🇵🇹"
+show = true
+description_summary = "Developed iOS application for CHANEL customer experience"
+description_full = """Developed iOS application for CHANEL customer experience
+
++ Fixed bugs and developed new features using Swift 5
++ Implemented MVVM architecture and REST APIs
++ Conducted snapshot unit testing"""
+
+[[experiences]]
+company = "BV Bank"
+link = "https://www.bv.com.br"
+tags = "Contract"
+date = "Oct 2020 - Jun 2021"
+role = "Mobile Engineer (Flutter)"
+location = "🌎 Remote, Brazil 🇧🇷"
+show = true
+description_summary = "Developed mobile banking application"
+description_full = """Developed mobile banking application
+
++ Rewrote app using Flutter + BLoC
++ Proposed and implemented CI/CD pipeline
++ Developed new features and fixed bugs"""
+
+[[experiences]]
+company = "Inter Bank"
+link = "https://bancointer.com.br"
+tags = "Permanent"
+date = "Apr 2020 - Oct 2020"
+role = "iOS Engineer"
+location = "🌎 Remote, Belo Horizonte/Brazil 🇧🇷"
+show = true
+description_summary = "Worked on the Insurance team at Inter Bank, a fintech with diverse features beyond banking."
+description_full = """Worked on the Insurance team at Inter Bank, a fintech with diverse features beyond banking.
+
++ Developed the Insurance module using MVVM architecture and RxSwift.
++ Worked with multi-repository projects on GitLab and Bulk build.
++ Integrated with JSON API and CA MAS API Gateway.
++ Mentored junior iOS developer in the squad.
++ Delivered app versions using Fastlane and Bitrise."""
+
+[[experiences]]
+company = "Avenue Code"
+link = "https://www.avenuecode.com.br"
+tags = "Permanent, 🇺🇸"
+date = "Dec 2019 - Apr 2020"
+role = "iOS Engineer - Carplay"
+location = "Belo Horizonte/Brazil 🇧🇷"
+show = true
+description_summary = "Developed a mobile app compatible with Apple CarPlay while adhering to Apple's guidelines."
+description_full = """Developed a mobile app compatible with Apple CarPlay while adhering to Apple's guidelines.
+
++ Built the app using Swift, View Code, and VIPER architecture.
++ Integrated backend through REST APIs and Firebase.
++ Managed app design via Zeplin with the UX team.
++ Used GitLab for version control and CI/CD pipelines for testing and release.
++ Worked in a Scrum team using Jira for task management."""
+
+[[experiences]]
+company = "ZUP Innovation"
+link = "https://zup.com.br"
+tags = "Contract"
+date = "Sep 2018 - Dec 2019"
+role = "iOS Developer (BS2 Bank)"
+location = "Belo Horizonte/Brazil 🇧🇷"
+show = true
+description_summary = "Worked on BS2 Bank's app and \"BS2 Flamengo\" (football-themed version)."
+description_full = """Worked on BS2 Bank's app and "BS2 Flamengo" (football-themed version).
+
++ Developed new features using Swift 4 and Auto Layout (Nib).
++ Implemented VIPER architecture and integrated external frameworks using Cocoapods.
++ Ensured compatibility with iPhone SE and iOS 11+.
++ Managed app schemes and targets to optimize builds."""
+
+[[experiences]]
+company = "TOTVS"
+link = "https://www.totvs.com"
+tags = "Permanent"
+date = "Aug 2008 - Sep 2018 (10yrs)"
+role = "DevOps / Product Owner / Systems Analyst / C# Developer"
+location = "Belo Horizonte/Brazil 🇧🇷"
+show = true
+description_summary = "Worked in various roles over 10 years, contributing to DevOps, software engineering, product ownership, and systems development."
+description_full = """Worked in various roles over 10 years, contributing to DevOps, software engineering, product ownership, and systems development.
+
++ **DevOps & Product Owner (Mar 2014 - Sep 2018):**
+  - Co-ideated and led the Continuous Integration (CI) and Continuous Delivery (CD) processes for the Belo Horizonte Development Center.
+  - Managed Configuration Management processes using Git, TFS, VSTS, and NuGet.
+  - Created and maintained software installers using InstallShield and Inno Setup.
+  - Led the deployment team and supported internal teams and clients.
+
++ **Release Management (Aug 2012 - Mar 2014):**
+  - Coordinated project releases and planning for cross-branch collaboration.
+  - Facilitated project meetings with product managers and team leaders.
+  - Planned corporate calendars between company branches.
+
++ **Systems Analyst (Jan 2009 - Aug 2012):**
+  - Managed software configuration across the development area, ensuring version control and secure access.
+  - Developed internal tools and applications using C# .NET.
+  - Maintained installers and supported teams in configuration environments.
+
++ **Software Development Intern (Aug 2008 - Jan 2009):**
+  - Supported the software engineering team with technical tasks and occasional software maintenance."""
+

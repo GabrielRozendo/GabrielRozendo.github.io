@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article>
+    {{ if ne .Params.showtitle false }}
+    <h1>{{ .Title }}</h1>
+    {{ end }}
+
+    {{ .Content }}
+</article>
+{{ end }}
+

@@ -1,0 +1,33 @@
+[[education]]
+institution = "IETEC"
+link = "https://www.linkedin.com/school/ietec"
+date = "2011 - 2012"
+major = "Advanced Project Management"
+degree = "MBA"
+show = true
+
+[[education]]
+institution = "IETEC"
+link = "https://www.linkedin.com/school/ietec"
+date = "2010 - 2011"
+major = "Project Management"
+degree = "Postgraduate"
+show = true
+
+[[education]]
+institution = "Pontifícia Universidade Católica (PUC Minas)"
+link = "https://www.pucminas.br"
+date = "2004 - 2009"
+major = "Information Systems"
+degree = "Bachelor's"
+show = true
+
+[[education]]
+institution = "Cotemig"
+link = "https://cotemig.com.br"
+date = "2001 - 2003"
+major = "High School with a Technical Certification in Information Technology"
+degree = "High School + Tech"
+description = "Studied programming logic, software development, and robotics as part of a vocational high school program focused on technology."
+show = true
+

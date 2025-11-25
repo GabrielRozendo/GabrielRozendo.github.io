@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+{{ if ne .Params.showdate false }}
+<p class="post-meta">
+    <time datetime="{{ .Date }}">
+        {{ .Date | time.Format site.Params.theme_config.date_format }}
+    </time>
+</p>
+{{ end }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+{{ partial "post_list.html" (dict "context" . "section" .Section)}}
+{{ end }}
+

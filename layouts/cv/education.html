@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article style="margin-top: 1.5rem;">
+    {{ if ne .Params.showtitle false }}
+    <h1>{{ .Title }}</h1>
+    {{ end }}
+
+    {{ partial "cv_full/education.html" . }}
+    {{ partial "cv_full/certificates.html" . }}
+</article>
+{{ end }}
+

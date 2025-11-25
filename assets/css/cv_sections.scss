@@ -1,0 +1,561 @@
+// CV Sections Styles - For individual CV pages (experience, projects, education, etc.)
+
+// Section header with title and view all link
+.cv-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .cv-section-title {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+// Add spacing after section header to first item in section
+.cv-experiences .cv-section-header ~ .cv-experience-item:first-child,
+.cv-projects .cv-section-header ~ .cv-project-item:first-child,
+.cv-education .cv-section-header ~ .cv-education-item:first-child,
+.cv-skills .cv-section-header ~ .cv-skill-group:first-child {
+  margin-top: 1rem;
+}
+
+.cv-languages .cv-section-header ~ .cv-language-items,
+.cv-interests .cv-section-header ~ .cv-interest-items {
+  margin-top: 1rem;
+}
+
+.cv-certificates .cv-section-header ~ .cv-certificate-item:first-child {
+  margin-top: 1rem;
+}
+
+// Section titles (when not inside header, keeps border)
+.cv-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  i {
+    font-size: 1.3rem;
+    color: #666;
+  }
+}
+
+// Add spacing after section title (when not in header) to first item
+.cv-experiences .cv-section-title + .cv-experience-item,
+.cv-experiences .cv-section-title ~ .cv-experience-item:first-child,
+.cv-projects .cv-section-title + .cv-project-item,
+.cv-projects .cv-section-title ~ .cv-project-item:first-child,
+.cv-skills .cv-section-title + .cv-skill-group,
+.cv-skills .cv-section-title ~ .cv-skill-group:first-child {
+  margin-top: 1rem;
+}
+
+.cv-languages .cv-section-title ~ .cv-language-items,
+.cv-interests .cv-section-title ~ .cv-interest-items {
+  margin-top: 1rem;
+}
+
+.cv-certificates .cv-section-title ~ .cv-certificate-item:first-child {
+  margin-top: 1rem;
+}
+
+// View all link
+.cv-section-view-all {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0066cc;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #004499;
+    text-decoration: underline;
+  }
+}
+
+// Experiences section
+.cv-experiences {
+  margin-bottom: 2rem;
+}
+
+.cv-experience-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.cv-experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 0.25rem;
+  gap: 1rem;
+}
+
+.cv-experience-company {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  min-width: 200px;
+  line-height: 1.2;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+  }
+}
+
+.cv-experience-meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.cv-experience-tags {
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cv-experience-date {
+  color: #888;
+  white-space: nowrap;
+}
+
+.cv-experience-date-current {
+  color: #5a8db8;
+  font-weight: 500;
+}
+
+.cv-experience-current-badge {
+  font-size: 0.6rem;
+  color: #aaa;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-left: 0.25rem;
+  padding: 0.05rem 0.3rem;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+}
+
+.cv-experience-location {
+  font-size: 0.9rem;
+  color: #777;
+  white-space: nowrap;
+}
+
+.cv-experience-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 200px;
+}
+
+.cv-experience-description {
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0 0 0.4rem 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #444;
+  }
+}
+
+.cv-experience-description-full {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+
+  p {
+    margin: 0.4rem 0;
+  }
+
+  ul {
+    margin: 0.4rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin: 0.2rem 0;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+// Projects section
+.cv-projects {
+  margin-bottom: 2rem;
+}
+
+.cv-project-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.cv-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.cv-project-name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  min-width: 200px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+  }
+}
+
+.cv-project-meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.cv-project-tags {
+  color: #666;
+  font-weight: 500;
+}
+
+.cv-project-date {
+  color: #888;
+}
+
+.cv-project-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+
+  p {
+    margin: 0.4rem 0;
+  }
+
+  ul {
+    margin: 0.4rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin: 0.2rem 0;
+  }
+}
+
+// Education section
+.cv-education {
+  margin-bottom: 2rem;
+
+  // Ensure spacing after section title when not in header
+  .cv-section-title + .cv-education-item,
+  .cv-section-title ~ .cv-education-item:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.cv-education-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.cv-education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.cv-education-institution {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  min-width: 200px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+  }
+}
+
+.cv-education-date {
+  font-size: 0.9rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.cv-education-degree {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.cv-education-major {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+.cv-education-description {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+// Section titles
+.cv-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  i {
+    font-size: 1.3rem;
+    color: #666;
+  }
+}
+
+// Skills section
+.cv-skills {
+  margin-bottom: 2rem;
+
+  // Ensure spacing after section title when not in header (used in /cv page)
+  .cv-section-title + .cv-skill-group,
+  .cv-section-title ~ .cv-skill-group:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.cv-skill-group {
+  margin-bottom: 1.25rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cv-skill-group-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.cv-skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cv-skill-item {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+// Languages section
+.cv-languages {
+  margin-bottom: 2rem;
+}
+
+.cv-language-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-language-item {
+  font-size: 0.95rem;
+  color: #444;
+
+  strong {
+    color: #333;
+    margin-right: 0.5rem;
+  }
+}
+
+// Certificates section
+.cv-certificates {
+  margin-bottom: 2rem;
+
+  // Ensure spacing after section title when not in header (used in education page)
+  .cv-section-title + .cv-certificate-item,
+  .cv-section-title ~ .cv-certificate-item:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.cv-certificate-item {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+
+  strong {
+    color: #333;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Interests section
+.cv-interests {
+  margin-bottom: 2rem;
+}
+
+.cv-interest-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cv-interest-item {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .cv-experience-item {
+    .cv-experience-header:first-child {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .cv-experience-header:last-child {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      margin-top: 0.25rem;
+    }
+
+    .cv-experience-company {
+      width: 100%;
+    }
+
+    .cv-experience-meta {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .cv-experience-role {
+      width: 100%;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-experience-location {
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+  }
+}
+

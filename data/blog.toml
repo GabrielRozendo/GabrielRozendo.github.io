@@ -1,0 +1,10 @@
+[[entries]]
+title = "Blog's posts"
+url = "/blog"
+show_more = true
+show_more_text = "See all posts →"
+show_more_url = "blog"
+
+  [entries.post_list]
+  section = "blog"
+  limit = 5

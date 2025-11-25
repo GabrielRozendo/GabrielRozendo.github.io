@@ -1,0 +1,27 @@
+{{ $projects := where .Site.Data.cv.projects.projects "show" true | default .Site.Data.cv.projects.projects }}
+{{ if $projects }}
+<section class="cv-projects">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-folder-open"></i> Projects</h2>
+    </div>
+    {{ range $projects }}
+    <div class="cv-project-item">
+        <div class="cv-project-header">
+            <h3 class="cv-project-name">
+                {{ if .link }}
+                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+                {{ else }}
+                {{ .name }}
+                {{ end }}
+            </h3>
+            <div class="cv-project-meta">
+                {{ if .tags }}<span class="cv-project-tags">{{ .tags }}</span>{{ end }}
+                {{ if .date }}<span class="cv-project-date">{{ .date }}</span>{{ end }}
+            </div>
+        </div>
+        <div class="cv-project-description">{{ .description | markdownify }}</div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+

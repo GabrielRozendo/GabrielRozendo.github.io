@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+{{- partial "head.html" . -}}
+
+<body a="{{ $.Site.Params.theme_config.appearance | default " auto" }}">
+    <main class="page-content" aria-label="Content">
+        <div class="w">
+            {{ partial "back_link.html" .}}
+
+            <h1>{{ .Title }}</h1>
+
+            {{ .Content }}
+            {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+        </div>
+    </main>
+</body>
+</html>

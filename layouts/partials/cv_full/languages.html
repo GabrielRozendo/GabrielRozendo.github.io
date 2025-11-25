@@ -1,0 +1,19 @@
+{{ $languages := .Site.Data.cv.profile.cv.languages }}
+{{ if and $languages (gt (len $languages) 0) }}
+<section class="cv-languages">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-language"></i> Languages</h2>
+    </div>
+    <div class="cv-language-items">
+        {{ range $languages }}
+        <div class="cv-language-item">
+            <strong>{{ .idiom }}</strong> <span>{{ .level }}</span>
+
+            {{ if (or (in (lower .level) "wip") (in (lower .level) "progress")) }}
+            <i class="fa-regular fa-spinner fa-spin-pulse"></i>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

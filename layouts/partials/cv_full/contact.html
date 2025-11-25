@@ -1,0 +1,106 @@
+{{ if .Site.Data.cv.contact }}
+<section class="cv-contact">
+    <div class="cv-contact-row">
+        {{ if .Site.Data.cv.contact.contact.email }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-envelope"></i>
+            <a href="mailto:{{ .Site.Data.cv.contact.contact.email }}" class="cv-contact-text">{{
+                .Site.Data.cv.contact.contact.email }}</a>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.linkedin }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-brands fa-linkedin"></i>
+            <a href="https://linkedin.com/in/{{ .Site.Data.cv.contact.contact.linkedin }}" target="_blank"
+                rel="noopener noreferrer" class="cv-contact-text">{{ .Site.Data.cv.contact.contact.linkedin }}</a>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.github }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-brands fa-github"></i>
+            <a href="https://github.com/{{ .Site.Data.cv.contact.contact.github }}" target="_blank"
+                rel="noopener noreferrer" class="cv-contact-text">{{ .Site.Data.cv.contact.contact.github }}</a>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.whatsapp }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/{{ .Site.Data.cv.contact.contact.whatsapp }}" target="_blank"
+                rel="noopener noreferrer" class="cv-contact-text">{{ .Site.Data.cv.contact.contact.whatsapp }}</a>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.telegram }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-brands fa-telegram"></i>
+            <a href="https://t.me/{{ .Site.Data.cv.contact.contact.telegram }}" target="_blank"
+                rel="noopener noreferrer" class="cv-contact-text">{{ .Site.Data.cv.contact.contact.telegram }}</a>
+        </span>
+        {{ end }}
+
+    </div>
+
+    <div class="cv-contact-row">
+        {{ if .Site.Data.cv.contact.contact.location }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-location-dot"></i>
+            <span class="cv-contact-text">{{ .Site.Data.cv.contact.contact.location }}</span>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.website }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-link"></i>
+            <a href="https://{{ .Site.Data.cv.contact.contact.website }}" target="_blank" rel="noopener noreferrer"
+                class="cv-contact-text">{{ .Site.Data.cv.contact.contact.website }}</a>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.website_personal }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-globe"></i>
+            <a href="https://{{ .Site.Data.cv.contact.contact.website_personal }}" target="_blank"
+                rel="noopener noreferrer" class="cv-contact-text">{{ .Site.Data.cv.contact.contact.website_personal
+                }}</a>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.birthday }}
+        {{ $birthday := .Site.Data.cv.contact.contact.birthday }}
+        {{ $born := (time $birthday) }}
+        {{ $now := now }}
+        {{ $age := sub ($now.Year) ($born.Year) }}
+        {{ if or (lt $now.Month $born.Month) (and (eq $now.Month $born.Month) (lt $now.Day $born.Day)) }}
+        {{ $age = sub $age 1 }}
+        {{ end }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-cake-candles"></i>
+            <span class="cv-contact-text">{{ $age }} y.o.</span>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.gender }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-venus-mars"></i>
+            <span class="cv-contact-text">{{ .Site.Data.cv.contact.contact.gender }}</span>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.marital_status }}
+        <span class="cv-contact-item">
+            <span class="cv-contact-text">{{ .Site.Data.cv.contact.contact.marital_status }}</span>
+        </span>
+        {{ end }}
+
+        {{ if .Site.Data.cv.contact.contact.nationality }}
+        <span class="cv-contact-item">
+            <i class="cv-contact-icon fa-solid fa-flag"></i>
+            <span class="cv-contact-text">{{ .Site.Data.cv.contact.contact.nationality }}</span>
+        </span>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

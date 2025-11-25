@@ -1,0 +1,26 @@
+{{ $education := where .Site.Data.cv.education.education "show" true | default .Site.Data.cv.education.education }}
+{{ if $education }}
+<section class="cv-education">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+    </div>
+    {{ range $education }}
+    <div class="cv-education-item">
+        <div class="cv-education-header">
+            <h3 class="cv-education-institution">
+                {{ if .link }}
+                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .institution }}</a>
+                {{ else }}
+                {{ .institution }}
+                {{ end }}
+            </h3>
+            {{ if .date }}<span class="cv-education-date">{{ .date }}</span>{{ end }}
+        </div>
+        <div class="cv-education-degree">{{ .degree }}</div>
+        <div class="cv-education-major">{{ .major }}</div>
+        {{ if .description }}<div class="cv-education-description">{{ .description }}</div>{{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+

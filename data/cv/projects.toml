@@ -1,0 +1,37 @@
+[[projects]]
+name = "Athletic Gear"
+link = "https://agsports.app"
+tags = "Mobile, Server, BackEnd, DevOps, Tech Lead"
+date = "2022 - Present"
+show = true
+description = """Full operation role. Mobile, server, devops and build a team to maintance them all working, also improving with new features.
++ Rebuilt using Flutter with MVVM architecture in both apps (also web version)
++ Migrating from MobX to Riverpod
++ Firebase for notifications and analytics, Sentry for error monitoring
++ Built API Server with DartFrog + Drift + Postgres
++ Configured AWS AppRunner with Docker for seamless deployment.
++ CI/CD for apps and for server. 
+The goal was release the MVP and test market. As it's validated, improving with better UI/UX, new features and preparing to constant updates."""
+
+[[projects]]
+name = "Transfácil"
+link = "https://bhbus.com.br"
+tags = "Mobile Flutter"
+date = "2022 - Present"
+show = true
+description = """+ Developed Flutter app for public transport ticketing and real-time bus tracking.
++ Designed UI/UX in collaboration with a design specialist using Figma.
++ Achieved 150k+ monthly active users with minimal operational issues.
++ Growth the revenue from past app version to current one: 2k brazilian reais month to 2MM+ month in two years."""
+
+[[projects]]
+name = "Readeck"
+link = "https://readeck.org"
+tags = "Open Source, Flutter"
+date = "WIP 2024"
+show = true
+description = """Readeck is a read later service and FOSS (Free and Open Source).
+As an user (I've it self-hosted in a VPS), I've offered to develop the mobile/desktop application with offline and other features.
++ In free time
++ Work In Progress"""
+

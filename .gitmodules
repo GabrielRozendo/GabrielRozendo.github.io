@@ -1,0 +1,7 @@
+[submodule "GitHub-readme"]
+	path = GitHub-readme
+	url = git@github.com:GabrielRozendo/GabrielRozendo.git
+
+[submodule "themes/nostyleplease"]
+	path = themes/nostyleplease
+	url = git@github.com:GabrielRozendo/hugo-theme-nostyleplease.git

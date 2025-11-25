@@ -1,0 +1,18 @@
+{{ if .Site.Data.cv.profile.cv.skills }}
+<section class="cv-skills">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-code"></i> Skills</h2>
+    </div>
+    {{ range .Site.Data.cv.profile.cv.skills }}
+    <div class="cv-skill-group">
+        <h3 class="cv-skill-group-name">{{ .name }}</h3>
+        <div class="cv-skill-items">
+            {{ range .items }}
+            <span class="cv-skill-item">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+

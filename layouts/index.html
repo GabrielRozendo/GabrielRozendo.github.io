@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<header>
+    <h1>{{ $.Site.Title }}</h1>
+    {{- if $.Site.Params.theme_config.show_description -}}
+    <p>{{ $.Site.Params.description }}</p>
+    {{- end -}}
+</header>
+
+{{ .Content }}
+
+{{/* Render posts section with custom formatting */}}
+{{ range $.Site.Data.blog.entries }}
+<div style="display: flex; align-items: center; justify-content: space-between;">
+    <h2 style="margin: 0;">{{ .title | default "??" }}</h2>
+    {{ if .show_more }}
+        <span style="font-size:0.95em;">
+            <a href="{{ .show_more_url | relURL }}">{{ .show_more_text | default "See more" }}</a>
+        </span>
+    {{ end }}
+</div>
+
+
+{{ partial "post_list.html" (dict "context" $ "section" .post_list.section "limit" .post_list.limit) }}
+
+{{ end }}
+
+<br />
+<footer style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e0e0e0; font-size: 0.9rem; color: #666;">
+    Made with <a href="https://gohugo.io">Hugo</a> and <a
+        href="https://github.com/Masellum/hugo-theme-nostyleplease">nostyleplease</a> theme.<br>
+    Subscribe via <a href="index.xml">RSS</a>
+</footer>
+
+{{ end }}

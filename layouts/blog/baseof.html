@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+{{- partial "head.html" . -}}
+
+<body a="{{ $.Site.Params.theme_config.appearance | default " auto" }}">
+    <main class="page-content" aria-label="Content">
+        <div class="w">
+            <div class="post-meta">
+                {{ partial "back_link.html" .}}
+            </div>
+            {{ if or (ne .Params.showdate false) .Params.tags }}
+            <div class="post-date-tags" style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; font-size: 0.9rem;">
+                {{ if ne .Params.showdate false }}
+                <time datetime="{{ .Date }}" style="color: #666;">
+                    {{ .Date | time.Format site.Params.theme_config.date_format }}
+                </time>
+                {{ else }}
+                <span></span>
+                {{ end }}
+                {{ if .Params.tags }}
+                <span style="margin-left: auto;">
+                    Tags: {{ partial "post_tags.html" (dict "page" . "highlight" true) }}
+                </span>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{- block "main" . }}{{- end }}
+        </div>
+    </main>
+</body>
+{{- if .Params.custom_js -}}
+{{- range .Params.custom_js -}}
+{{ $js := resources.Get (print "js/" . ".js") }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+{{- end -}}
+{{- end -}}
+
+</html>
+

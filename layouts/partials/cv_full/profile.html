@@ -1,0 +1,9 @@
+{{ if .Site.Data.cv.profile.cv.profile }}
+<section class="cv-profile">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-user"></i> Profile</h2>
+    </div>
+    <p class="cv-profile-text">{{ .Site.Data.cv.profile.cv.profile }}</p>
+</section>
+{{ end }}
+

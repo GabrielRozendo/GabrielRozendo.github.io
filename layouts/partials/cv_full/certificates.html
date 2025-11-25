@@ -1,0 +1,13 @@
+{{ $certificates := .Site.Data.cv.profile.cv.certificates }}
+{{ if and $certificates (gt (len $certificates) 0) }}
+<section class="cv-certificates">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-certificate"></i> Certificates</h2>
+    </div>
+    {{ range $certificates }}
+    <div class="cv-certificate-item">
+        <strong>{{ .name }}</strong> - {{ .issuer }}{{ if .date }} ({{ .date }}){{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}

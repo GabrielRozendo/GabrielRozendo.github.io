@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article style="margin-top: 1.5rem;">
+    <p style="text-align: center; margin-bottom: 1rem; color: #666; font-size: 0.9rem;">
+        This is a <strong>simplified version</strong> of my CV.
+        <a href="/cv/full/">View full CV →</a>
+    </p>
+
+    <h1>{{ .Site.Data.cv.cv.name }}</h1>
+    <p><strong>{{ .Site.Data.cv.cv.title }}</strong></p>
+
+    {{ partial "cv_full/contact.html" . }}
+
+    {{ if .Site.Data.cv.cv.profile }}
+    <section>
+        <h2>Profile</h2>
+        <p>{{ .Site.Data.cv.cv.profile }}</p>
+        <p><em><a href="/cv/full/#profile">Read full profile →</a></em></p>
+    </section>
+    <hr>
+    {{ end }}
+
+    {{ partial "cv/experiences_summary.html" . }}
+    <hr>
+
+    {{ partial "cv/projects_summary.html" . }}
+    <hr>
+
+    {{ partial "cv/education_summary.html" . }}
+    <hr>
+
+    {{ partial "cv/skills_summary.html" . }}
+    <hr>
+
+    {{ partial "cv/languages_summary.html" . }}
+    <hr>
+
+    {{ partial "cv/certificates_summary.html" . }}
+    <hr>
+
+    {{ partial "cv/interests_summary.html" . }}
+
+    <hr>
+
+    <div class="cv-last-update">
+        <i class="fa-regular fa-calendar fa-bounce calendar-icon"></i>&nbsp;<img alt="GitHub last commit in data/cv"
+            src="https://img.shields.io/github/last-commit/GabrielRozendo/GabrielRozendo.github.io?path=data%2Fcv&style=flat-square&label=updated%20at">
+    </div>
+</article>
+{{ end }}

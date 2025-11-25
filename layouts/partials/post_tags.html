@@ -1,0 +1,40 @@
+{{- /* Unified partial to display categories and tags
+     Usage: {{ partial "post_tags.html" $page }} or {{ partial "post_tags.html" (dict "page" $page "highlight" true) }}
+     - highlight: true for highlighted style (darker, 100%), false for subtle (default)
+*/ -}}
+{{- $page := . -}}
+{{- $highlight := false -}}
+{{- if isset . "page" -}}
+    {{- /* Received dictionary with options */ -}}
+    {{- $page = .page -}}
+    {{- if isset . "highlight" -}}
+        {{- $highlight = .highlight -}}
+    {{- end -}}
+{{- end -}}
+{{- if and $page $page.Params (or $page.Params.tags $page.Params.categories) -}}
+    {{- $tagColor := cond $highlight "#666" "#999" -}}
+    {{- $tagSize := cond $highlight "100%" "90%" -}}
+    {{- $categoryColor := cond $highlight "#555" "#666" -}}
+    {{- $separatorColor := cond $highlight "#888" "#999" -}}
+    <span class="{{ if $highlight }}post-tags-highlight{{ end }}" style="color: {{ $categoryColor }};">
+        {{- if $page.Params.categories -}}
+            <span style="color: {{ $separatorColor }};">[</span>
+            {{- range $index, $category := $page.Params.categories -}}
+                {{- if $index }}<span style="color: {{ $separatorColor }};">; </span>{{ end -}}
+                <a href="{{ "/categories/" | relURL }}{{ $category | urlize }}" style="color: {{ $categoryColor }}; text-decoration: none;">{{ $category }}</a>
+            {{- end -}}
+            <span style="color: {{ $separatorColor }};">]</span>
+        {{- end -}}
+        {{- if and $page.Params.categories $page.Params.tags -}}
+            <span style="margin: 0 0.3rem; color: {{ $separatorColor }};"> • </span>
+        {{- end -}}
+        {{- if $page.Params.tags -}}
+            {{- range $index, $tag := $page.Params.tags -}}
+            <span style="margin: 0; padding:0; font-size: {{ $tagSize }}; color: {{ $tagColor }};">
+                {{- if $index }}<span style="margin: 0 0.2rem;">•</span>{{ end -}}
+                <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}" style="color: {{ $tagColor }}; text-decoration: none;">{{ $tag }}</a>
+            {{- end -}} </span>
+        {{- end -}}
+    </span>
+{{- end -}}
+

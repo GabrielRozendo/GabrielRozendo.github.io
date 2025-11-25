@@ -1,0 +1,465 @@
+// CV Simple Styles - For simplified CV pages (list and individual sections)
+// This file includes all styles needed for the simplified CV version
+// It reuses the same CSS classes as cv_full but with different styling
+
+@import "cv_contact.scss";
+@import "cv_sections.scss";
+
+// Dark mode support
+body[a="dark"] {
+  .cv-section-header {
+    border-bottom-color: #333;
+  }
+
+  .cv-section-title {
+    color: #ffffff;
+  }
+
+  .cv-section-view-all {
+    color: #79a8ff;
+    
+    &:hover {
+      color: #a0c4ff;
+    }
+  }
+
+  .cv-experience-item,
+  .cv-project-item,
+  .cv-education-item {
+    border-bottom-color: #333;
+  }
+
+  .cv-experience-company,
+  .cv-project-name,
+  .cv-education-institution,
+  .cv-skill-group-name {
+    color: #ffffff;
+  }
+
+  .cv-experience-role {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .cv-experience-description-full,
+  .cv-project-description,
+  .cv-education-degree,
+  .cv-education-major {
+    color: #cccccc;
+  }
+
+  .cv-experience-read-more {
+    color: #79a8ff;
+    
+    &:hover {
+      color: #a0c4ff;
+    }
+  }
+
+  .cv-experience-tags,
+  .cv-project-tags,
+  .cv-experience-date,
+  .cv-project-date,
+  .cv-education-date {
+    color: #999999;
+  }
+
+  .cv-experience-location {
+    color: #aaaaaa;
+  }
+
+  .cv-experience-current-badge {
+    background-color: #1a1a1a;
+    color: #999999;
+    border: 1px solid #333;
+  }
+
+  .cv-skill-item,
+  .cv-interest-item {
+    background-color: #1a1a1a;
+    color: #cccccc;
+  }
+
+  .cv-language-item {
+    color: #cccccc;
+    
+    strong {
+      color: #ffffff;
+    }
+  }
+
+  .cv-certificate-item {
+    color: #cccccc;
+    
+    strong {
+      color: #ffffff;
+    }
+  }
+
+  .cv-contact {
+    border-bottom-color: #333;
+  }
+
+  .cv-contact-item {
+    color: #cccccc;
+  }
+
+  .cv-contact-icon {
+    color: #999999;
+  }
+
+  a.cv-contact-text {
+    color: #79a8ff;
+    
+    &:hover {
+      color: #a0c4ff;
+    }
+  }
+
+  // Links in descriptions
+  .cv-experience-description-full a,
+  .cv-project-description a {
+    color: #79a8ff;
+    
+    &:hover {
+      color: #a0c4ff;
+    }
+  }
+
+  // Section title icons
+  .cv-section-title i {
+    color: #999999;
+  }
+
+  // Education description
+  .cv-education-description {
+    color: #aaaaaa;
+  }
+
+  // Markdown lists and formatting in descriptions
+  .cv-experience-description-full,
+  .cv-project-description {
+    ul {
+      color: #cccccc;
+    }
+
+    li {
+      color: #cccccc;
+      
+      strong {
+        color: #ffffff;
+      }
+    }
+
+    p {
+      color: #cccccc;
+      
+      strong {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] {
+    .cv-section-header {
+      border-bottom-color: #333;
+    }
+
+    .cv-section-title {
+      color: #ffffff;
+    }
+
+    .cv-section-view-all {
+      color: #79a8ff;
+      
+      &:hover {
+        color: #a0c4ff;
+      }
+    }
+
+    .cv-experience-item,
+    .cv-project-item,
+    .cv-education-item {
+      border-bottom-color: #333;
+    }
+
+    .cv-experience-company,
+    .cv-project-name,
+    .cv-education-institution,
+    .cv-skill-group-name {
+      color: #ffffff;
+    }
+
+    .cv-experience-role {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .cv-experience-description-full,
+    .cv-project-description,
+    .cv-education-degree,
+    .cv-education-major {
+      color: #cccccc;
+    }
+
+    .cv-experience-read-more {
+      color: #79a8ff;
+      
+      &:hover {
+        color: #a0c4ff;
+      }
+    }
+
+    .cv-experience-tags,
+    .cv-project-tags,
+    .cv-experience-date,
+    .cv-project-date,
+    .cv-education-date {
+      color: #999999;
+    }
+
+    .cv-experience-location {
+      color: #aaaaaa;
+    }
+
+    .cv-experience-current-badge {
+      background-color: #1a1a1a;
+      color: #999999;
+      border: 1px solid #333;
+    }
+
+    .cv-skill-item,
+    .cv-interest-item {
+      background-color: #1a1a1a;
+      color: #cccccc;
+    }
+
+    .cv-language-item {
+      color: #cccccc;
+      
+      strong {
+        color: #ffffff;
+      }
+    }
+
+    .cv-certificate-item {
+      color: #cccccc;
+      
+      strong {
+        color: #ffffff;
+      }
+    }
+
+    .cv-contact {
+      border-bottom-color: #333;
+    }
+
+    .cv-contact-item {
+      color: #cccccc;
+    }
+
+    .cv-contact-icon {
+      color: #999999;
+    }
+
+    a.cv-contact-text {
+      color: #79a8ff;
+      
+      &:hover {
+        color: #a0c4ff;
+      }
+    }
+
+    // Links in descriptions
+    .cv-experience-description-full a,
+    .cv-project-description a {
+      color: #79a8ff;
+      
+      &:hover {
+        color: #a0c4ff;
+      }
+    }
+
+    // Section title icons
+    .cv-section-title i {
+      color: #999999;
+    }
+
+    // Education description
+    .cv-education-description {
+      color: #aaaaaa;
+    }
+
+    // Markdown lists and formatting in descriptions
+    .cv-experience-description-full,
+    .cv-project-description {
+      ul {
+        color: #cccccc;
+      }
+
+      li {
+        color: #cccccc;
+        
+        strong {
+          color: #ffffff;
+        }
+      }
+
+      p {
+        color: #cccccc;
+        
+        strong {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+// Override section header for simplified version
+.cv-section-header {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .cv-section-title {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+// Override section titles for simplified version
+.cv-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  text-transform: none;
+  letter-spacing: normal;
+
+  i {
+    font-size: 1.1rem;
+    color: #666;
+  }
+}
+
+// View all link for simplified version
+.cv-section-view-all {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0066cc;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #004499;
+    text-decoration: underline;
+  }
+}
+
+// Simplified spacing
+.cv-experiences,
+.cv-projects,
+.cv-education,
+.cv-skills,
+.cv-languages,
+.cv-certificates,
+.cv-interests {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.cv-experience-item,
+.cv-project-item,
+.cv-education-item {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+// Simplified typography
+.cv-experience-company,
+.cv-project-name,
+.cv-education-institution {
+  font-size: 1.1rem;
+}
+
+.cv-experience-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  font-style: normal;
+}
+
+// Read more link
+.cv-experience-read-more {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #004499;
+    text-decoration: underline;
+  }
+}
+
+// Contact section styles are imported from cv_contact.scss
+// Last update badge styles are imported from cv_contact.scss
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .cv-experience-item {
+    .cv-experience-header:first-child {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .cv-experience-header:last-child {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      margin-top: 0.25rem;
+    }
+
+    .cv-experience-company {
+      width: 100%;
+    }
+
+    .cv-experience-meta {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .cv-experience-role {
+      width: 100%;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-experience-location {
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+  }
+}
+

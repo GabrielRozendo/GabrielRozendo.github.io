@@ -1,0 +1,14 @@
+{{ $interests := .Site.Data.cv.profile.cv.interests }}
+{{ if and $interests (gt (len $interests) 0) }}
+<section class="cv-interests">
+    <div class="cv-section-header">
+        <h2 class="cv-section-title"><i class="fa-solid fa-heart"></i> Interests</h2>
+    </div>
+    <div class="cv-interest-items">
+        {{ range $interests }}
+        <span class="cv-interest-item">{{ . }}</span>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+

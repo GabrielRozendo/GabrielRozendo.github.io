@@ -1,0 +1,79 @@
+name: Sync README (Single Source of Truth)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Configure Git to use HTTPS for submodules (must be done before checkout)
+          git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "git@github.com:"
+          git config --global url."https://".insteadOf "git://"
+
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: true
+
+      - name: Sync README to submodule
+        run: |
+          cp README.md GitHub-readme/README.md
+          # Adjust repository references in submodule README
+          sed -i 's/GabrielRozendo\.github\.io/GabrielRozendo/g' GitHub-readme/README.md
+
+      - name: Sync README to whoami.md (with Hugo front matter)
+        run: |
+          # Generate current date in ISO format with timezone
+          CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S+01:00")
+          # Create whoami.md file with Hugo front matter + README content
+          {
+            echo "+++"
+            echo "date = ${CURRENT_DATE}"
+            echo "showdate = false"
+            echo "draft = false"
+            echo "title = 'whoami'"
+            echo "showtitle = false"
+            echo "+++"
+            echo ""
+            echo "> **Note:** This content is the same from my GitHub profile: [github.com/gabrielrozendo](https://github.com/GabrielRozendo)"
+            echo ""
+            cat README.md
+          } > content/whoami.md
+
+      - name: Commit and push to submodule
+        run: |
+          cd GitHub-readme
+          # Configure remote to use HTTPS with token
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/GabrielRozendo/GabrielRozendo.git
+          if [ -n "$(git status --porcelain)" ]; then
+            git add README.md
+            git commit -m "chore: sync README from main repository [skip ci]"
+            git push origin HEAD
+          else
+            echo "No changes to commit in submodule"
+          fi
+
+      - name: Commit changes to main repository
+        run: |
+          git add content/whoami.md GitHub-readme
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore: sync README to whoami.md and submodule [skip ci]" || echo "No changes to commit"
+            git push origin HEAD || echo "Nothing to push"
+          else
+            echo "No changes to commit in main repository"
+          fi
+
