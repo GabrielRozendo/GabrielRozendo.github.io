@@ -1,4 +1,4 @@
-<h1 align="center"><i>Hello world</i>, I'm Gabriel Rozendo <img src="/assets/gifs/hi.gif" width="30px"></h1>
+<h1 align="center"><i>Hello world</i>, I'm Gabriel Rozendo <img src="/assets/hi.gif" width="30px"></h1>
 
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/GabrielRozendo/GabrielRozendo.github.io?style=flat-square)
