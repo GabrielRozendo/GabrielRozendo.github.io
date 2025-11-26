@@ -7,11 +7,7 @@
     <meta name="description" content="{{ .Summary }}" />
     
     <title>
-        {{ if not .IsHome }}
-            {{ .Title }} - {{ $.Site.Title }}
-        {{ else }}
-            {{ $.Site.Title }}
-        {{ end }}
+        {{ .Title }}
     </title>
     
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
