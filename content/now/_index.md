@@ -4,6 +4,8 @@ draft = false
 title = 'Now'
 +++
 
+Figuring out how to keep this organized and as a good start!
+
 > /now is a more personal look at what people are doing right now, what they care about, and what they could use help with.
 
 ## What I’m doing now
