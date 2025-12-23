@@ -3,6 +3,7 @@ backend:
   repo: GabrielRozendo/GabrielRozendo.github.io
   branch: main
 
+
 media_folder: "static/images"
 public_folder: "/images"
 
@@ -16,6 +17,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "homelab"
@@ -23,17 +25,51 @@ collections:
     folder: "content/homelab"
     create: true
     fields:
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "now"
+    label: "Now"
+    folder: "content/now"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
     label: "Root pages"
     files:
+      - label: "Homelab (index)"
+        name: "homelab_index"
+        file: "content/homelab/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Now (index)"
+        name: "now_index"
+        file: "content/now/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
       - label: "About me (whoami)"
         name: "whoami"
         file: "content/whoami.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Show title", name: "showtitle", widget: "boolean", required: false }
+          - { label: "Show date", name: "showdate", widget: "boolean", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "About"
@@ -41,6 +77,8 @@ collections:
         file: "content/about.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Ideas"
@@ -48,11 +86,33 @@ collections:
         file: "content/ideas/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
           - { label: "Body", name: "body", widget: "markdown" }
 
-      - label: "Now"
-        name: "now"
-        file: "content/now.md"
+      - label: "AI"
+        name: "ai"
+        file: "content/ai.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Me"
+        name: "me"
+        file: "content/me.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime", required: false }
+          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
+          - { label: "Show date", name: "showdate", widget: "boolean", required: false }
           - { label: "Body", name: "body", widget: "markdown" }

@@ -1,8 +1,8 @@
-+++
-date = 2025-11-25T00:00:00+01:00
-draft = true
-title = 'Ideas'
-+++
+---
+title: "Ideas"
+date: 2025-11-25T00:00:00+01:00
+draft: true
+---
 
 
 - Usar a ideia de juntar about, work, personal, timeline: https://web.archive.org/web/20250426101419/https://www.paulinasaez.com/about/

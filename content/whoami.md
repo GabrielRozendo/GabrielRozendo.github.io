@@ -1,10 +1,10 @@
-+++
-date = 2025-11-25T00:00:00+01:00
-showdate = false
-draft = false
-title = 'whoami'
-showtitle = false
-+++
+---
+title: "whoami"
+date: 2025-11-25T00:00:00+01:00
+draft: false
+showdate: false
+showtitle: false
+---
 
 > **Note:** This content is the same from my GitHub profile: [github.com/gabrielrozendo](https://github.com/GabrielRozendo)
 

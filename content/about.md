@@ -1,8 +1,8 @@
-+++
-date = 2025-11-25T00:00:00+01:00
-draft = false
-title = 'About'
-+++
+---
+title: "About"
+date: 2025-11-25T00:00:00+01:00
+draft: false
+---
 
 > /about pages are about the past: how people see themselves and what brought them there. That's useful as a general overview.
 

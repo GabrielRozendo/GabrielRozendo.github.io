@@ -1,8 +1,8 @@
-+++
-title = "Gabriel Rozendo"
-date = 2025-11-25T00:00:00+01:00
-draft = false
-+++
+---
+title: "Gabriel Rozendo"
+date: 2025-11-25T00:00:00+01:00
+draft: false
+---
 
 > _¡Hola, bienvenido 👋!_, I'm **Gabriel Rozendo**, a Brazilian 🇧🇷 Software Engineer.
 
@@ -23,13 +23,11 @@ For **professional**, checkout my [/cv](/cv)
 
 Be [/welcome](/welcome) and if want to know [/whoami](/whoami) in a geek version!
 
----
 
 ### About • Ideas • Now
 
 This site follows the concept of [aboutideasnow.com](https://aboutideasnow.com) and [nownownow.com](https://nownownow.com/about)
 A simple way to share what you're [/about](/about), what [/ideas](/ideas) you're exploring, and what you're doing [/now](/now).
 
---- 
 
 <!-- <li><strong><a href="/ai">AI</a></strong> - Thoughts on AI and productivity</li> -->
