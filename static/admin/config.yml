@@ -43,23 +43,6 @@ collections:
   - name: "pages"
     label: "Root pages"
     files:
-      - label: "Homelab (index)"
-        name: "homelab_index"
-        file: "content/homelab/_index.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime", required: false }
-          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
-
-      - label: "Now (index)"
-        name: "now_index"
-        file: "content/now/_index.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime", required: false }
-          - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "About me (whoami)"
         name: "whoami"
