@@ -1,6 +1,6 @@
 ---
 title: Now (index)
-date: ''
+date: 2025-12-23T14:37:00
 draft: false
 ---
 Figuring out how to keep this organized and as a good start!
@@ -11,7 +11,7 @@ Figuring out how to keep this organized and as a good start!
 
 > This is a now page, and if you have your own site, \~\~you should\~\~ _would be nice_ make one, too.
 
-> 
+>
 
 > Inspired by [Derek Sivers](https://sive.rs/now)
 
