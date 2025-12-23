@@ -1,7 +1,7 @@
 {{ $experiences := where .Site.Data.cv.experiences.experiences "show" true | default
 .Site.Data.cv.experiences.experiences }}
 {{ if $experiences }}
-<section class="cv-experiences">
+<section class="cv-experiences" id="experiences">
     <div class="cv-section-header">
         <h2 class="cv-section-title"><i class="fa-solid fa-briefcase"></i> Experiences</h2>
     </div>

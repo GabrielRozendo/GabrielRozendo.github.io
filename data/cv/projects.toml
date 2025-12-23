@@ -1,37 +1,44 @@
 [[projects]]
 name = "Athletic Gear"
 link = "https://agsports.app"
-tags = "Mobile, Server, BackEnd, DevOps, Tech Lead"
+tags = "Mobile, Flutter, Server, BackEnd, DevOps, Tech Lead"
 date = "2022 - Present"
 show = true
-description = """Full operation role. Mobile, server, devops and build a team to maintance them all working, also improving with new features.
-+ Rebuilt using Flutter with MVVM architecture in both apps (also web version)
-+ Migrating from MobX to Riverpod
-+ Firebase for notifications and analytics, Sentry for error monitoring
-+ Built API Server with DartFrog + Drift + Postgres
-+ Configured AWS AppRunner with Docker for seamless deployment.
-+ CI/CD for apps and for server. 
-The goal was release the MVP and test market. As it's validated, improving with better UI/UX, new features and preparing to constant updates."""
+description = """End-to-end Technical Leadership. Responsible for the entire ecosystem (Mobile, Server, and DevOps) and team management.
++ **Architecture:** Rebuilt the platform using Flutter (Mobile/Web) with a focus on modularity and testability.
++ **Modernization:** Led the migration from MobX to Riverpod for superior state management and scalability.
++ **Full-Stack Dart:** Developed a high-performance API using Dart Frog + Drift (Postgres), containerized with Docker.
++ **Cloud & CI/CD:** Orchestrated deployments via AWS AppRunner and automated delivery pipelines.
++ **Result:** Validated the MVP and scaled the product with a sustainable, maintainable codebase."""
 
 [[projects]]
-name = "Transfácil"
+name = "Transfácil (BHBus+)"
 link = "https://bhbus.com.br"
-tags = "Mobile Flutter"
+tags = "Mobile, Flutter"
 date = "2022 - Present"
 show = true
-description = """+ Developed Flutter app for public transport ticketing and real-time bus tracking.
-+ Designed UI/UX in collaboration with a design specialist using Figma.
-+ Achieved 150k+ monthly active users with minimal operational issues.
-+ Growth the revenue from past app version to current one: 2k brazilian reais month to 2MM+ month in two years."""
+description = """+ Engineered a mission-critical Flutter application for public transport ticketing and real-time tracking.
++ Collaborated with UI/UX specialists to deliver a seamless, user-centric interface.
++ **Performance at Scale:** Maintained stability for 150k+ monthly active users with near-zero downtime.
++ **Business Impact:** Scaled monthly revenue from R$ 2k to over R$ 2M within two years by improving product reliability and feature set."""
+
+[[projects]]
+name = "Bastante"
+link = "https://bastante.pt"
+tags = "Mobile, Flutter, Server, BackEnd, DevOps, Tech Lead"
+date = "2025 - Present"
+show = true
+description = """+ Leading the development of a specialized marketplace platform for short-term hiring solutions.
++ Designing a scalable architecture to handle rapid matching between employers and candidates.
++ Implementing a robust Backend-for-Frontend (BFF) strategy to optimize mobile performance."""
 
 [[projects]]
 name = "Readeck"
 link = "https://readeck.org"
 tags = "Open Source, Flutter"
-date = "WIP 2024"
+date = "//TODO: 2026"
 show = true
-description = """Readeck is a read later service and FOSS (Free and Open Source).
-As an user (I've it self-hosted in a VPS), I've offered to develop the mobile/desktop application with offline and other features.
-+ In free time
-+ Work In Progress"""
-
+description = """Readeck is a Free and Open Source (FOSS) read-later service. 
++ Contributing to the community by developing the mobile and desktop applications.
++ Implementing offline synchronization and native integration features.
++ Tech stack: Flutter with a focus on local database performance and cross-platform UI."""

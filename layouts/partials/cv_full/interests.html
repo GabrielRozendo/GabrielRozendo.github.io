@@ -1,6 +1,6 @@
 {{ $interests := .Site.Data.cv.profile.cv.interests }}
 {{ if and $interests (gt (len $interests) 0) }}
-<section class="cv-interests">
+<section class="cv-interests" id="interests">
     <div class="cv-section-header">
         <h2 class="cv-section-title"><i class="fa-solid fa-heart"></i> Interests</h2>
     </div>

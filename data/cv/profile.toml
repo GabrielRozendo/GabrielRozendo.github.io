@@ -16,7 +16,7 @@ skills = [
 languages = [
   { idiom = "Portuguese", level = "Native" },
   { idiom = "English", level = "Professional" },
-  { idiom = "Spanish", level = "Basic [WIP - Work In Progress]" }
+  { idiom = "Spanish", level = "B1 – Intermediate [WIP - Work In Progress]" }
 ]
 
 certificates = [

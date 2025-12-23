@@ -1,6 +1,6 @@
 {{ $education := where .Site.Data.cv.education.education "show" true | default .Site.Data.cv.education.education }}
 {{ if $education }}
-<section class="cv-education">
+<section class="cv-education" id="education">
     <div class="cv-section-header">
         <h2 class="cv-section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
     </div>

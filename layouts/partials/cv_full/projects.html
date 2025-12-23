@@ -1,6 +1,6 @@
 {{ $projects := where .Site.Data.cv.projects.projects "show" true | default .Site.Data.cv.projects.projects }}
 {{ if $projects }}
-<section class="cv-projects">
+<section class="cv-projects" id="projects">
     <div class="cv-section-header">
         <h2 class="cv-section-title"><i class="fa-solid fa-folder-open"></i> Projects</h2>
     </div>

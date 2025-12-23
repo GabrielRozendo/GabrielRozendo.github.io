@@ -3,15 +3,23 @@ company = "Model View Labs"
 link = ""
 tags = "Contract, Freelancer"
 date = "Since Jul 2022"
-role = "Software Architect, Flutter dev & Tech Leader / team builder"
+role = "Software Architect & Tech Lead"
 location = "Remote 🌎"
 show = true
-description_summary = "Contracted to build and grow the agency, create and recreate clients' projects and provide leadership to build a team."
-description_full = """Contracted to build and grow the agency, create and recreate clients' projects and provide leadership to build a team.
+description_summary = "Tech Lead focused on high-stakes product turnarounds. Hired to stabilize client relationships by overhauling legacy codebases, architecting scalable Flutter/Dart ecosystems, and building high-performance engineering teams."
 
-+ Project: Athletic Gear, recreate the both mobile apps + server backend with Dart (dart frog + drift) in AWS
-+ Project: BHBus+, recreate the mobile app. A navigation and public service tickets, using existent API rest.
-+ More info in project section"""
+description_full = """Spearheaded a technical transformation to prevent client churn and modernize the agency's portfolio. 
+
++ **Client Retention & Recovery:** Stabilized failing projects and regained client trust through technical excellence and transparent communication.
++ **Technical Leadership:** Architected end-to-end solutions using Flutter and Dart (Server-side), implementing CI/CD pipelines and AWS cloud infrastructure.
++ **Team Building & Mentorship:** Recruited and mentored junior developers, establishing best practices (MVVM, Clean Code) to ensure project autonomy and long-term sustainability.
++ **Strategic Growth:** Managed the full lifecycle of high-impact projects, from MVP to scaling for hundreds of thousands of users.
+
+#### [Key Projects (detailed breakdown below)](/cv/full/#projects)
+
++ **Athletic Gear:** Rebuilt mobile apps and server backend using Dart (Dart Frog + Drift) on AWS.
++ **BHBus+:** Rebuilt the mobile navigation and ticketing app, integrating with existing REST APIs.
++ **Bastante:** Developing a specialized platform for short-term hiring solutions."""
 
 [[experiences]]
 company = "Aubay"
