@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode }}">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>404 - {{ $.Site.Title }}</title>
-    
+
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
     {{ $sass := resources.Get "css/404.scss" }}
     {{ if $sass }}
@@ -13,17 +14,27 @@
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
 </head>
+
 <body>
     <main class="bsod container">
         <h1 class="neg title"><span class="bg">Error - 404</span></h1>
-        <p>We're sorry, but the page you're looking for can't be found, to continue:</p>
-        
+        <p>We're sorry, but the page <span id="requested-path"
+                style="background: #aaaaaa; color: #0414a7; padding: 0 5px;"></span> can't be found, to continue:</p>
+
         <p>* Return to <a href="/" class="link">home</a>.<br />
             * Send us an <a href="mailto:email@rozendo.dev" class="link">e-mail</a> about this error and try later.</p>
         <nav class="nav">
             <a href="/" class="link">index</a>&nbsp;|&nbsp;<a href="/contact" class="link">contact</a>
         </nav>
     </main>
-</body>
-</html>
 
+    <script>
+        // Catch the path (ex: /short) and remove the slash to keep it clean
+        const path = window.location.pathname.replace(/^\//, '');
+
+        // If has a path, shows it. Other wise only "page"
+        document.getElementById('requested-path').innerText = path ? path : "page";
+    </script>
+</body>
+
+</html>
